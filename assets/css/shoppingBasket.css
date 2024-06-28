@@ -1,0 +1,156 @@
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+dialog {
+  margin: auto;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: system-ui;
+  background-color: black;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1 {
+  color: white;
+}
+
+.container {
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: 10px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.product {
+  background-color: white;
+  padding-block: 30px;
+  padding-inline: 16px;
+  position: relative;
+  border-radius: 8px;
+}
+
+.product h3 {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product span {
+  font-size: 10px;
+  background-color: black;
+  color: white;
+  padding: 2px 5px; 
+}
+
+
+.product p {
+  font-size: 12px;
+}
+
+.productEditControls {
+  display: none;
+  position: absolute;
+  gap: 5px;
+  right: 10px;
+  bottom:  0;
+}
+
+.product:hover .productEditControls {
+  display: flex;
+  align-items: center;
+}
+
+.productEditControls a {
+  background-color: white;
+  padding: 2px 5px;
+  display: inline-block;
+}
+
+.productEditControls a svg {
+  display: inline;
+  width: 16px;
+  fill: black;  
+}
+
+.productEditControls button {
+  border: none;
+  border-radius: 8px;
+  font-size: 10px;
+  padding: 4px;
+}
+
+.editorControl {
+  font-size: 16px;
+}
+
+.productHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.productHeader button {
+  padding-inline: 8px;
+}
+
+dialog {
+  padding: 10px;
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modelEdit {
+  display: none;
+}
+
+.editModal .modelEdit {
+  display: initial;
+}
+
+.editModal .modelAddNew {
+  display: none;
+}
+
+
+#basket p {
+  color: aqua;
+}

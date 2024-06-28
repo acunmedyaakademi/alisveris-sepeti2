@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alışveriş Sepeti</title>
+  <link rel="stylesheet" href="assets/css/shoppingBasket.css">
+  <script src="assets/js/shoppingBasket.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="productHeader">
+      <h1>Girilen Ürünler</h1>
+      <button id="addProductBtn">Ekle</button>
+    </header>
+    <button id="clearStorage">Storage i Temizle</button>
+    <div class="products" id="productContainer"></div>
+    <div id="basket"></div>
+
+  </div>
+
+  <dialog id="modal">
+    <h2 class="modelAddNew">Ürün Ekle</h2>
+    <h2 class="modelEdit">Ürün Ekle</h2>
+    <form method="dialog" autocomplete="off" id="addBasketForm">
+      <p><input type="text" name="name" placeholder="Ürün Adı Giriniz"></p>
+      <p><input type="number" name="price" placeholder="Ürün Fiyatı Giriniz" step="0.001"></p>
+      <p><input type="text" name="color" placeholder="Ürün Rengi Giriniz"></p>
+      <p><select name="category">
+          <option value="Elektronik">Elektronik</option>
+          <option value="Giyim">Giyim</option>
+          <option value="Ev ve Mutfak">Ev ve Mutfak</option>
+          <option value="Teknoloji">Teknoloji</option>
+          <option value="Aksesuarlar">Aksesuarlar</option>
+        </select></p>
+      <p><button class="modelAddNew">Ekle</button> <button class="modelEdit">Kaydet</button> <button type="button"
+          onclick="addBasketForm.reset();modal.close();">Vazgeç</button></p>
+      <input type="hidden" name="id" value="">
+    </form>
+  </dialog>
+</body>
+
+</html>
